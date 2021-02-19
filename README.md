@@ -1,6 +1,6 @@
 # Phaser 3 Webpack Project Template
 
-A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/) that includes hot-reloading for development and production-ready builds.
+A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) or [Typescript 4](https://www.typescriptlang.org/)  and [Webpack 5](https://webpack.js.org/) that includes hot-reloading for development and production-ready builds.
 
 This has been updated for Phaser 3.50.0 version and above.
 
@@ -17,12 +17,18 @@ Loading images via JavaScript module `import` is also supported, although not re
 | `npm install` | Install project dependencies |
 | `npm start` | Build project and open web server running project |
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
+| `npm run dev` | Live code bundle with development settings|
+| `npm run buildts` | Builds code bundle with production settings (minification, uglification, etc..) with typescript|
+| `npm run devts` | Live code bundle with development settings with typescript|
 
 ## Writing Code
 
 After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
 
 After starting the development server with `npm start`, you can edit any files in the `src` folder and webpack will automatically recompile and reload your server (available at `http://localhost:8080` by default).
+
+## External library
+Phaser is set as external library, will be served from `lib` folder, so is easily use specific version such as `facebook-plugin`
 
 ## Customizing the Template
 
@@ -41,6 +47,8 @@ You can write modern ES6+ JavaScript and Babel will transpile it to a version of
 ### Webpack
 
 If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json'.
+
+Specific typescript webpack setting are located in `webpack/typescript.js`
 
 ## Deploying Code
 
