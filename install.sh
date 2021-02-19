@@ -1,0 +1,1 @@
+yarn add -D @babel/core @babel/preset-env babel-loader clean-webpack-plugin file-loader html-webpack-plugin raw-loader terser-webpack-plugin webpack-merge expose-loader ts-loader typescript webpack webpack-cli webpack-dev-server
